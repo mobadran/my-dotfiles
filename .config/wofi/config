@@ -1,0 +1,5 @@
+stylesheet=./style.css
+show=drun
+width=600
+height=300
+show_comments=true

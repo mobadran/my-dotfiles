@@ -1,0 +1,4 @@
+cmd mkdir %mkdir "$@"
+map a push :mkdir<space>
+cmd touch %touch "$@"
+map n push :touch<space>

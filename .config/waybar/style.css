@@ -1,0 +1,94 @@
+* {
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    transition: background-color .3s ease-out;
+}
+
+window#waybar {
+    /* background: rgba(26, 27, 38, 0.75); */
+    background: rgba(0, 0, 0, 0);
+    color: #c0caf5;
+    font-family: 
+        SpaceMono Nerd Font,
+        feather;
+    transition: background-color .5s;
+}
+
+#left-group,
+#taskbar,
+#window {
+    background: rgba(0, 0, 8, .7);
+    margin: 10px 0 0 20px;
+    padding: 0 15px;
+    border-radius: 15px;
+}
+
+.modules-right {
+    background: rgba(0, 0, 8, .7);
+    margin: 15px 20px 0 0;
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#tray {
+    padding: 0 10px;
+    border-radius: 15px;
+}
+
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover {
+    background: rgba(26, 27, 38, 0.9);
+}
+
+
+#workspaces button {
+  background: transparent;
+  font-family:
+    SpaceMono Nerd Font,
+    feather;
+  font-weight: 900;
+  font-size: 13pt;
+  color: #c0caf5;
+  border:none;
+  border-radius: 15px;
+  margin: 2px 0;
+  box-shadow: none;
+}
+
+#workspaces button.active, #taskbar button.active {
+    background: #13131d; 
+}
+
+#workspaces button:hover, #taskbar button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+#custom-arch {
+    margin-right: 15px;
+    font-size: 25px;
+    transition: color .5s;
+}
+
+#custom-arch:hover {
+    color: #1793d1;
+}
+
+#pulseaudio.muted {
+    background-color: #bf616a;
+}
+
+#taskbar button {
+    border-radius: 50%;
+    margin: 2px 2px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}

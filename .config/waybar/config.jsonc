@@ -1,0 +1,114 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 2,
+    "modules-left": [
+        "group/left-group",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+	"tray",
+        "custom/keyboard-layout",
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "clock",
+	"custom/power"
+    ],
+
+    // Modules --
+
+    "tray": {
+	"icon-size": 16,
+	"spacing": 5
+    },
+    
+    "group/left-group": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/arch",
+            "hyprland/workspaces"
+        ]
+    },
+    "custom/arch": {
+        "format": "󰣇",
+        "on-click": "wofi --show drun",
+        "tooltip": true,
+        "tooltip-format": "arch btw"
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 16,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+           "Alacritty"
+        ],
+        "app_ids-mapping": {
+          "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+    },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}%",
+        "format-muted": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "  {}%",
+        "tooltip": true
+    },
+    "clock": {
+        "format": "{:%a %I:%M | %e %B} ",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "custom/keyboard-layout": {
+        "format": "   {}",
+        "exec": "~/.config/hypr/scripts/get-kb-layout.sh",
+        "return-type": "json",
+        "interval": 1,
+        "tooltip": true
+    },
+
+  "custom/power": {
+	"format": " ", // Font Awesome power icon
+	"tooltip-format": "wlogout",
+ 	"on-click": "wlogout",
+ 	"return-type": "json"
+  }
+}

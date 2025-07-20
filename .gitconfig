@@ -1,0 +1,7 @@
+[user]
+	email = mohamedbadran1492008@gmail.com
+	name = mobadran
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true

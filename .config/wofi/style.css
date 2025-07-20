@@ -1,0 +1,33 @@
+* {
+  outline: none;
+  border: none;
+}
+
+window {
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(50, 50, 50, 0.9);
+  color: #ccc;
+  background: linear-gradient(135deg, rgba(50, 50, 50, 0.9) 90%, rgba(51, 255, 0, 0.2));
+}
+
+#entry {
+  padding: 0.5em;
+}
+
+#entry:selected {
+  background-color: rgb(26, 26, 26);
+}
+
+#text:selected {
+  color: white;
+}
+
+#input {
+  /* background-color: rgba(50, 50, 50, 0.5); */
+  background: none;
+  color: white;
+  padding: 0.25em;
+  border: none;
+}
